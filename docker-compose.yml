@@ -1,0 +1,18 @@
+version: "2"
+services:
+  polymesh-node-primary:
+    image: polymathnet/polymesh:3.0.1-debian
+    network_mode: host
+    volumes:
+      - "./snapshots/${SNAPSHOT_NAME}.json:/var/lib/chainState/fork.json"
+    command:
+      [
+        "-d",
+        "/var/lib/polymesh",
+        "--chain=/var/lib/chainState/fork.json",
+        "--alice",
+        "--rpc-external",
+        "--ws-external",
+        "--rpc-cors=all",
+        "--force-authoring",
+      ]
