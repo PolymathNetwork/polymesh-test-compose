@@ -1,7 +1,7 @@
 version: "2"
 services:
   polymesh-node-primary:
-    image: polymathnet/polymesh:3.0.1-debian
+    image: "polymathnet/polymesh:${POLYMESH_VERSION}-debian"
     network_mode: host
     volumes:
       - "./snapshots/${SNAPSHOT_NAME}.json:/var/lib/fork.json"

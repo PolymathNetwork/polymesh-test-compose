@@ -20,4 +20,10 @@ This is intended to be used for local development or CI integration test purpose
   SNAPSHOT_NAME=<file_name> docker-compose up -d
   ```
 
+- A custom polymesh node version can also be provided like so:
+
+  ```
+  POLYMESH_VERSION=<version> docker-compose up -d
+  ```
+
 The chain should be accessible through `ws://localhost:9944`
